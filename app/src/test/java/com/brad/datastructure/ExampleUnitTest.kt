@@ -1,4 +1,4 @@
-package com.brad.datastructire
+package com.brad.datastructure
 
 import org.junit.Test
 
