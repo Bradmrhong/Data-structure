@@ -65,9 +65,22 @@ public class LinkedListTest {
         linkedList.remove("3");
         System.out.println("1111111");
 
+        linkedList = new LinkedList<>();
+        linkedList.add("0");
+        linkedList.add("1");
+        linkedList.add("2");
         linkedList.add("3");
         linkedList.remove("2");
         System.out.println("1111111");
+
+        linkedList = new LinkedList<>();
+        linkedList.add("0");
+        linkedList.add("1");
+        linkedList.add("2");
+        linkedList.add("3");
+        linkedList.remove("0");
+        System.out.println("1111111");
+
 
     }
 

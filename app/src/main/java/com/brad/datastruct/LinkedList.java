@@ -181,7 +181,7 @@ public class LinkedList<E> implements List<E> {
      * 定义链表节点数据结构
      * @param <E>
      */
-    private static class Node<E> {
+    public static class Node<E> {
         E item;         // 节点数据
         Node<E> next;   // 后继节点
         Node<E> prev;   // 前继节点
