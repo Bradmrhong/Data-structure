@@ -1,9 +1,9 @@
-package com.brad.datastruct;
+package com.brad.datastruct.LinkedList;
 
 /**
  * Description:
  *
- * @author Brad <mailto:brad.hong@bindo.com>
+ * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0
  * @since 2019-11-20 18:17
  */
@@ -182,9 +182,9 @@ public class LinkedList<E> implements List<E> {
      * @param <E>
      */
     public static class Node<E> {
-        E item;         // 节点数据
-        Node<E> next;   // 后继节点
-        Node<E> prev;   // 前继节点
+        public E item;         // 节点数据
+        public Node<E> next;   // 后继节点
+        public Node<E> prev;   // 前继节点
 
         public Node(E item, Node<E> prev, Node<E> next) {
             this.item = item;

@@ -1,9 +1,9 @@
-package com.brad.datastruct;
+package com.brad.datastruct.LinkedList;
 
 /**
  * Description:
  *
- * @author Brad <mailto:brad.hong@bindo.com>
+ * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0
  * @since 2019-11-20 17:57
  */

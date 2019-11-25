@@ -1,12 +1,10 @@
-package com.brad.datastruct;
+package com.brad.datastruct.LinkedList;
 
-
-import java.net.HttpRetryException;
 
 /**
  * Description:
  *
- * @author Brad <mailto:brad.hong@bindo.com>
+ * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0
  * @since 2019-11-22 14:29
  */
