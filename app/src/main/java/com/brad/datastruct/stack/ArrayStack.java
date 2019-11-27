@@ -33,7 +33,7 @@ public class ArrayStack {
         if (top == 0) {
             return null;
         }
-        return items[top--];
+        return items[--top];
     }
 
 }

@@ -38,6 +38,7 @@ public class LinkedListUtil {
      * 2-循环遍历两个链表，取小的一方插入
      * 3-循环结束，取还未到尾结点的链表链到最后
      * **技巧--使用哨兵节点简化第一步
+     * 1-哨兵节点为头结点的前一个节点，因此无需找出头结点，直接比较两个链表的节点就可以了
      */
     public static LinkedList<Integer> mergeOrderedList(LinkedList<Integer> listA, LinkedList<Integer> listB) {
 
@@ -126,6 +127,26 @@ public class LinkedListUtil {
 
     }
 
+    /**
+     * 单链表翻转
+     * 1 -> 2 -> 3 -> 4 -> 5
+     * 1 <- 2 <- 3 <- 4 <- 5
+     * @param head
+     * @return
+     */
+    public static LinkedList.Node<String> reverse(LinkedList.Node<String> head) {
+        LinkedList.Node<String> prev = null;
+        LinkedList.Node<String> current = head;
+        LinkedList.Node<String> next;
+        while (current != null) {
+            next = current.next;    // 保存next节点，因为next节点在下一步要被赋值给前一位
+            current.next = prev;
+
+            prev = current; // 保存下次循环的prev
+            current = next; // 当前节点后移
+        }
+        return prev;
+    }
 
 
 }

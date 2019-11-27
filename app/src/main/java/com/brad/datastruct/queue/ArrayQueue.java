@@ -26,7 +26,7 @@ public class ArrayQueue {
             if (head == 0) {
                 dequeue();
                 items[tail] = item;
-            } else {    // 数据迁移
+            } else {    // head往前移，导致有些数组空间被空置，数据迁移
                 for (int i = 0; i < head; i++) {
                     items[i] = items[head+i];
                 }
@@ -41,7 +41,7 @@ public class ArrayQueue {
 
     public int dequeue() {
         // 队列空
-        if (tail == capacity) {
+        if (tail == head) {
             return -1;
         }
         return items[head++];
