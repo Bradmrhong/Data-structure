@@ -6,7 +6,7 @@ import java.util.Calendar;
  * Description: 利用栈实现浏览器的前进后退功能
  * 使用两个栈，点击一个新界面，直接push到栈1，且如果栈2不为空，清空栈2；
  * 点击后退按钮，弹出栈1的界面，并加入到栈2；
- * 点击前进按钮，弹出栈2的界面，
+ * 点击前进按钮，弹出栈2的界面，并加入到栈1；
  *
  * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0
