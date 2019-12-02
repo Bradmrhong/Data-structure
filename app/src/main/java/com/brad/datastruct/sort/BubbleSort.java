@@ -11,7 +11,8 @@ package com.brad.datastruct.sort;
 public class BubbleSort {
 
     /**
-     * 大泡下沉
+     * 大泡下沉: 分成已排序区和未排序区，遍历并相邻两个数据进行比较，判断是否交换位置，
+     * 每次冒泡都至少有一个元素移动到它该到的位置（即未排序段的末尾）。
      * @param nums
      */
     public static void BigBubbleDown(int[] nums) {
