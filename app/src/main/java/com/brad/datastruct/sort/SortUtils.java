@@ -199,4 +199,41 @@ public class SortUtils {
     }
 
 
+
+    public static void quickSort2(int[] a) {
+        if (a == null || a.length < 2) {
+            return;
+        }
+        quickSortInternally2(a, 0, a.length-1);
+
+    }
+
+    public static void quickSortInternally2(int[] a, int p, int r) {
+        if (p >= r) {
+            return;
+        }
+        int pivot = partition2(a, p ,r);
+        quickSortInternally2(a, p, pivot-1);
+        quickSortInternally2(a, pivot+1, r);
+    }
+
+    private static int partition2(int[] a,int p, int r) {
+        int pivot = a[r];
+        int pivotPosition = p;
+        for (int i = p; i < r; i++) {
+            if (a[i] < pivot) {
+                int tmp = a[pivotPosition];
+                a[pivotPosition++] = a[i];
+                a[i] = tmp;
+            }
+        }
+        a[r] = a[pivotPosition];
+        a[pivotPosition] = pivot;
+        return pivotPosition;
+    }
+
+
+
+
+
 }

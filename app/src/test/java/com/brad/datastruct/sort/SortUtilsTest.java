@@ -45,8 +45,13 @@ public class SortUtilsTest {
 
     @Test
     public void quickSort() {
+//        int[] a = new int[]{3,5,1,5,7,8,9,3,1,4666};
+//        SortUtils.quickSort(a);
+//        System.out.println(Arrays.toString(a));
+//
+
         int[] a = new int[]{3,5,1,5,7,8,9,3,1,4666};
-        SortUtils.quickSort(a);
+        SortUtils.quickSort2(a);
         System.out.println(Arrays.toString(a));
 
     }
