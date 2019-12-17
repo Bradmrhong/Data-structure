@@ -167,11 +167,6 @@ public class LinkedList<E> implements List<E> {
             currentNode.prev = nextNode;
             preNode = currentNode;
             currentNode = nextNode;
-//            nextNode = currentNode.next;
-//            currentNode.next = preNode;
-//            currentNode.prev = nextNode;
-//            preNode = currentNode;
-//            currentNode = nextNode;
         }
         first = preNode;
     }

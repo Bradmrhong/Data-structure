@@ -94,7 +94,7 @@ public class LRULinkedListCache<E> {
     }
 
     /**
-     * 插入节点到表头
+     * 头插法：插入节点到表头
      * @param e
      * @return
      */

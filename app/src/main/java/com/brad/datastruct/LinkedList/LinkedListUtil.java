@@ -1,6 +1,8 @@
 package com.brad.datastruct.LinkedList;
 
 
+import java.util.Arrays;
+
 /**
  * Description:
  *
@@ -146,6 +148,33 @@ public class LinkedListUtil {
             current = next; // 当前节点后移
         }
         return prev;
+    }
+
+    public static LinkedList.Node<String> swapPairs(LinkedList.Node<String> head) {
+        if (head == null) {
+            return head;
+        }
+        LinkedList.Node<String> pre = new LinkedList.Node<>("", null, head);
+        LinkedList.Node<String> temp = pre;
+        while (temp.next != null && temp.next.next != null) {
+            LinkedList.Node<String> start = temp.next;
+            LinkedList.Node<String> end = temp.next.next;
+            temp.next = end;
+            start.next = end.next;
+            end.next = start;
+            temp = start;
+        }
+        return pre.next;
+
+    }
+
+    /**
+     * 打印链表
+     */
+    public static void print(LinkedList<Integer> linkedList) {
+        for (int i = 0; i < linkedList.size(); i++) {
+            System.out.println(linkedList.get(i));
+        }
     }
 
 

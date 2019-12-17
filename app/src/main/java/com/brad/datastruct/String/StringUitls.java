@@ -1,5 +1,7 @@
 package com.brad.datastruct.String;
 
+import java.util.Arrays;
+
 /**
  * Description: Leetcode 03: 寻找最长不重复子串的长度
  *
@@ -42,6 +44,42 @@ public class StringUitls {
         return max;
     }
 
+
+    /**
+     * 找到一个数组中最大的的第K个数
+     * @param arr
+     * @param k
+     * @return
+     */
+    public static int findKthLargest(int[] arr, int k) {
+        int p = 0, r = arr.length - 1;
+        while(true) {
+            int partition = partition(arr, p, r);
+            if (partition + 1 == k) {
+                return arr[partition];
+            } else if (partition + 1 < k) {
+                p = partition + 1;
+            } else {
+                r = partition - 1;
+            }
+        }
+
+    }
+
+    private static int partition(int[] nums, int p, int r) {
+        int pivot = nums[r];
+        int pivotPosition = p;
+        for (int i = p; i < r; i ++) {
+            if (nums[i] > pivot) {
+                int tmp = nums[pivotPosition];
+                nums[pivotPosition++] = nums[i];
+                nums[i] = tmp;
+            }
+        }
+        nums[r] = nums[pivotPosition];
+        nums[pivotPosition] = pivot;
+        return pivotPosition;
+    }
 
 
 }
