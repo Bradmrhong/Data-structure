@@ -76,9 +76,9 @@ public class LinkedListUtil {
     /**
      * 删除单链表的倒数第K个节点
      * 思路：
-     * 1-快指针遍历链表K次到达一个节点
+     * 1-快指针遍历链表K-1次到达一个节点
      * 2-如果快指针为空，返回；如果快指针不为空，建立慢指针
-     * 3-启动快慢指针遍历，当快指针为空时，慢指针指向的就是倒数第K个节点
+     * 3-启动快慢指针遍历，当快指针.next为空时，慢指针指向的就是倒数第K个节点
      * 4-执行链表删除
      * @param head
      * @param k
@@ -90,25 +90,31 @@ public class LinkedListUtil {
         }
         LinkedList.Node<Integer> fast = head;
         LinkedList.Node<Integer> slow = head;
-        for (int i = 0; i < k && fast != null; i++) {
+        // 注意：这里是k-1步，可以画图举个例子
+        for (int i = 1; i < k-1 && fast != null; i++) {
             fast = fast.next;
         }
         if (fast == null) {
             return head;
         }
         LinkedList.Node<Integer> prev = null;
-        while (fast != null) {
+        // 注意循环条件，fast.next != null，如果fast.next == null说明快指针多走了一步。
+        while (fast.next != null) {
             fast = fast.next;
             prev = slow;
             slow = slow.next;
         }
         // 4 执行删除
-        prev.next = slow.next;
+        if (prev != null) {
+            prev.next = slow.next;
+        } else {
+            head = head.next;
+        }
         return head;
     }
 
     /**
-     * 删除单链表中间的节点
+     * 求单链表中间的节点
      * 思路：
      * 1-设置快慢指针，快指针每次走两步，慢指针每次走一步，当快指针周到尾部时，慢指针所指即中间节点(无论size是奇数还是偶数)
      * @param head
@@ -150,6 +156,11 @@ public class LinkedListUtil {
         return prev;
     }
 
+    /**
+     * 循环法，两两交换单链表中的节点
+     * @param head
+     * @return
+     */
     public static LinkedList.Node<String> swapPairs(LinkedList.Node<String> head) {
         if (head == null) {
             return head;
@@ -157,12 +168,13 @@ public class LinkedListUtil {
         LinkedList.Node<String> pre = new LinkedList.Node<>("", null, head);
         LinkedList.Node<String> temp = pre;
         while (temp.next != null && temp.next.next != null) {
-            LinkedList.Node<String> start = temp.next;
-            LinkedList.Node<String> end = temp.next.next;
-            temp.next = end;
-            start.next = end.next;
-            end.next = start;
-            temp = start;
+            LinkedList.Node<String> start = temp.next;      // 指向要交换的前节点
+            LinkedList.Node<String> end = temp.next.next;   // 指向要交换的后节点
+            temp.next = end;        // 将temp节点指向转换后的节点，也就是end
+            start.next = end.next;  // 将前节点指向end.next
+            end.next = start;       // 将后节点指向前节点
+
+            temp = start;           // 将temp置位，准备下一次循环
         }
         return pre.next;
 

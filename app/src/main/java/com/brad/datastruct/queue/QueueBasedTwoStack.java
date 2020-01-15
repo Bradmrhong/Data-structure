@@ -3,7 +3,7 @@ package com.brad.datastruct.queue;
 /**
  * Description: 两个栈组成一个队列
  * 入队列：直接push入栈1；
- * 出队列：如果栈2为空，把栈1pop出来，全部压到栈2中，然后pop一个元素到栈2；如果栈2不为空，则直接pop栈2元素
+ * 出队列：如果栈2为空，把栈1pop出来，全部压到栈2中，然后pop一个元素到栈2；如果栈2不为空，则直接pop栈2元素./
  *
  * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0

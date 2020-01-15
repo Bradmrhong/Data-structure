@@ -3,7 +3,7 @@ package com.brad.datastruct.tree;
 /**
  * Description:
  *
- * @author Brad <mailto:brad.hong@bindo.com>
+ * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0
  * @since 2019-12-16 10:49
  */
