@@ -8,8 +8,15 @@ package com.brad.datastruct.tree;
  * @since 2019-12-16 10:49
  */
 public class TreeNode {
-    TreeNode left;
-    TreeNode right;
-    TreeNode parent;
-    int value;
+    public TreeNode left;
+    public TreeNode right;
+    public int val;
+
+    public TreeNode() {
+
+    }
+
+    public TreeNode(int val) {
+        this.val = val;
+    }
 }

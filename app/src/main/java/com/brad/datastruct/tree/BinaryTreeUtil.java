@@ -1,8 +1,5 @@
 package com.brad.datastruct.tree;
 
-import android.media.SoundPool;
-
-import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -21,7 +18,7 @@ public class BinaryTreeUtil {
      */
     public static void preOrder(TreeNode root) {
         if (root != null) {
-            System.out.println(root.value);
+            System.out.println(root.val);
             preOrder(root.left);
             preOrder(root.right);
         }
@@ -34,7 +31,7 @@ public class BinaryTreeUtil {
     public static void midOrder(TreeNode root) {
         if (root != null) {
             midOrder(root.left);
-            System.out.println(root.value);
+            System.out.println(root.val);
             midOrder(root.right);
         }
     }
@@ -47,7 +44,7 @@ public class BinaryTreeUtil {
         if (root != null) {
             postOrder(root.left);
             postOrder(root.right);
-            System.out.println(root.value);
+            System.out.println(root.val);
         }
     }
 
@@ -65,7 +62,7 @@ public class BinaryTreeUtil {
             for (int i = 0; i < levelLenth; i++) {
                 tmp = queue.poll();
                 if (tmp != null) {
-                    System.out.println(tmp.value);
+                    System.out.println(tmp.val);
                     if (tmp.left != null) queue.add(tmp.left);
                     if (tmp.right != null) queue.add(tmp.right);
                 }

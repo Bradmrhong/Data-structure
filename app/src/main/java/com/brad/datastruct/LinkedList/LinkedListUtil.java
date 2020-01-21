@@ -117,10 +117,11 @@ public class LinkedListUtil {
      * 求单链表中间的节点
      * 思路：
      * 1-设置快慢指针，快指针每次走两步，慢指针每次走一步，当快指针周到尾部时，慢指针所指即中间节点(无论size是奇数还是偶数)
+     * 如果链表是偶数，返回中间两个节点的后面一个
      * @param head
      * @return
      */
-    public static LinkedList.Node<Integer> removeMiddle(LinkedList.Node<Integer> head) {
+    public static LinkedList.Node<Integer> findMiddle(LinkedList.Node<Integer> head) {
         if (head == null) {
             return null;
         }
