@@ -4,8 +4,6 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
-
 /**
  * Description:
  *
@@ -18,7 +16,7 @@ public class BubbleSortTest {
     @Test
     public void bigBubbleDown() {
         int[] a = new int[]{3,5,1,5,7,8,9,3,1,4666};
-        BubbleSort.BigBubbleDown(a);
+        BubbleSort.bigBubbleDown(a);
         System.out.println(Arrays.toString(a));
 
     }
@@ -26,7 +24,7 @@ public class BubbleSortTest {
     @Test
     public void bigBubbleDown2() {
         int[] a = new int[]{3,5,1,4666,7,8,9,3,1,4666};
-        BubbleSort.BigBubbleDown2(a);
+        BubbleSort.bigBubbleDown2(a);
         System.out.println(Arrays.toString(a));
 
     }
@@ -34,7 +32,7 @@ public class BubbleSortTest {
     @Test
     public void smallBubbleUp() {
         int[] a = new int[]{3,5,1,5,7,8,9,3,1,4666};
-        BubbleSort.SmallBubbleUp(a);
+        BubbleSort.smallBubbleUp(a);
         System.out.println(Arrays.toString(a));
 
     }

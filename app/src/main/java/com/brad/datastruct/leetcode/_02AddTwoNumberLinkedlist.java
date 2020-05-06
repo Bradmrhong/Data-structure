@@ -3,7 +3,7 @@ package com.brad.datastruct.leetcode;
 import com.brad.datastruct.LinkedList.ListNode;
 
 /**
- * Description: 有序环数组的查找
+ * Description: 链表相加
  *
  * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0

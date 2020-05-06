@@ -15,7 +15,7 @@ public class BubbleSort {
      * 每次冒泡都至少有一个元素移动到它该到的位置（即未排序段的末尾）。
      * @param nums
      */
-    public static void BigBubbleDown(int[] nums) {
+    public static void bigBubbleDown(int[] nums) {
         if (nums == null) {
             return;
         }
@@ -39,7 +39,7 @@ public class BubbleSort {
      * 优化2： 记录最后交换时候的index，二次遍历的时候到index就可以了，因为index后面的已经排序完成
      * @param nums
      */
-    public static void BigBubbleDown2(int[] nums) {
+    public static void bigBubbleDown2(int[] nums) {
         if (nums == null) {
             return;
         }
@@ -65,7 +65,7 @@ public class BubbleSort {
     /**
      * 小泡上浮（不推荐使用）
      */
-    public static void SmallBubbleUp(int[] nums) {
+    public static void smallBubbleUp(int[] nums) {
         if (nums == null) {
             return;
         }

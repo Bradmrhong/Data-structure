@@ -47,6 +47,8 @@ public class StringUitls {
 
     /**
      * 找到一个数组中最大的的第K个数
+     * 可以看到每经过一次快排之后，pivot就被放到最最终排序的位置，因此对乱序数组进行快速排序，
+     * 如果pivot+1 = K，那么a[pivot]就是要查找的元素
      * @param arr
      * @param k
      * @return

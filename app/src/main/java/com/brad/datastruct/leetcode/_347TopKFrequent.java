@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
- * Description:
+ * Description: 一个数组中前K个频率最高的数
  *
  * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0

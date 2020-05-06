@@ -1,12 +1,8 @@
 package com.brad.datastruct.sort;
 
-import com.brad.datastruct.LinkedList.LinkedList;
-
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 /**
  * Description:
@@ -19,11 +15,11 @@ public class BubbleSortTest {
     @Test
     public void sort() {
         int[] a = new int[]{3,5,1,5,7,8,9,3,1,4666};
-        BubbleSort.BigBubbleDown(a);
+        BubbleSort.bigBubbleDown(a);
         System.out.println(Arrays.toString(a));
 
         a = new int[]{3,5,1,5,7,8,9,3,1,4666};
-        BubbleSort.SmallBubbleUp(a);
+        BubbleSort.smallBubbleUp(a);
         System.out.println(Arrays.toString(a));
 
     }

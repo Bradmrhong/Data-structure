@@ -32,6 +32,7 @@ public class ArrayUitls {
             // 遇到负数就插入到负数区间的最后一个位置，不能直接交换，直接交换会打乱位置
             if (a[j] < 0) {
                 tmp = a[j];
+                // 移位
                 for (int m = j; m > i; m--) {
                     a[m] = a[m-1];
                 }
