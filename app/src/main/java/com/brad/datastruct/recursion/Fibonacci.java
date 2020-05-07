@@ -7,7 +7,7 @@ import java.util.HashMap;
  * F[n]=F[n-1]+F[n-2] n>=3
  * F[1]=1,F[2]=1
  *
- * @author Brad <mailto:brad.hong@bindo.com>
+ * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0
  * @since 2020/5/6 8:07 PM
  */

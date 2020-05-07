@@ -46,7 +46,7 @@ public class LinkedListUtil {
 
         LinkedList<Integer> newList = new LinkedList<>();
         LinkedList.Node<Integer> soldier = new LinkedList.Node<>(null, null, null);
-        LinkedList.Node<Integer> p = soldier;
+        LinkedList.Node<Integer> p = soldier;       // 定义tmp节点，不能直接使用soldier = soldier.next，这样会使得soldier丢失
 
         LinkedList.Node<Integer> nodeA = listA.first;
         LinkedList.Node<Integer> nodeB = listB.first;

@@ -81,9 +81,9 @@ public class LRULinkedListCache<E> {
         if (head.next == null) {
             return false;
         }
-        Node<E> prev = head.next;
+        Node<E> prev = head;
 
-        while (prev.next != null) {
+        while (prev.next.next != null) {
             prev = prev.next;
         }
 

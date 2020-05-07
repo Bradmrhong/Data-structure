@@ -5,7 +5,7 @@ import android.text.TextUtils;
 /**
  * Description:
  *
- * @author Brad <mailto:brad.hong@bindo.com>
+ * @author Brad <mailto:bradmrhong@gmail.com>
  * @version 1.0
  * @since 2020/4/22 9:31 PM
  */
