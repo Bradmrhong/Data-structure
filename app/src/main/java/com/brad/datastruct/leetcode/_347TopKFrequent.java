@@ -22,7 +22,7 @@ import java.util.PriorityQueue;
 public class _347TopKFrequent {
     /**
      * 解题思路，使用一个hashmap存储（数字，频率）
-     * 遍历map，使用优先队列（堆）（大小为K）按照频率大到小存储
+     * 遍历map，使用优先队列（小顶堆）（大小为K）按照频率大到小存储
      * 输出数列
      *
      * @param nums
@@ -37,6 +37,7 @@ public class _347TopKFrequent {
             count.put(n, count.getOrDefault(n, 0) + 1);
         }
 
+        // 小顶堆
         PriorityQueue<Integer> heap = new PriorityQueue<>(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
