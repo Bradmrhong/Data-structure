@@ -1,4 +1,4 @@
-package com.brad.datastruct.leetcode;
+package com.brad.datastruct.leetcode.string;
 
 /**
  * Description: LeetCode 27

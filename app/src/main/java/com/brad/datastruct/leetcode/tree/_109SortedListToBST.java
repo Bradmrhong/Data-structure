@@ -1,4 +1,4 @@
-package com.brad.datastruct.leetcode;
+package com.brad.datastruct.leetcode.tree;
 
 import com.brad.datastruct.LinkedList.ListNode;
 import com.brad.datastruct.tree.TreeNode;

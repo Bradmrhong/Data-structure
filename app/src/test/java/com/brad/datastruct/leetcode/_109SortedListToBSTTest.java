@@ -1,10 +1,9 @@
 package com.brad.datastruct.leetcode;
 
 import com.brad.datastruct.LinkedList.ListNode;
+import com.brad.datastruct.leetcode.tree._109SortedListToBST;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Description:
