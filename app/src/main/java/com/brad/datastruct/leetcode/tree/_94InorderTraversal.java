@@ -14,7 +14,7 @@ import java.util.Stack;
  * @version 1.0
  * @since 2020-01-16 18:02
  */
-public class _98InorderTraversal {
+public class _94InorderTraversal {
 
     private List<Integer> ret = new ArrayList<>();
 
